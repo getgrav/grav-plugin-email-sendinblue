@@ -1,7 +1,7 @@
 name: Email Sendinblue
 slug: email-sendinblue
 type: plugin
-version: 1.0.0
+version: 1.0.1
 description: Sendinblue integration for new Email plugin
 icon: envelope
 author:
