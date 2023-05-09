@@ -1,7 +1,7 @@
 name: Email Sendinblue
 slug: email-sendinblue
 type: plugin
-version: 0.1.0
+version: 1.0.0
 description: Sendinblue integration for new Email plugin
 icon: envelope
 author:
@@ -15,7 +15,7 @@ license: MIT
 
 dependencies:
   - { name: grav, version: '>=1.7.0' }
-  - { name: email, version: '>=4.0.0-rc.1' }
+  - { name: email, version: '>=4.0.0' }
 
 form:
   validation: loose
