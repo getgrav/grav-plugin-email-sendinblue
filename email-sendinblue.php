@@ -50,11 +50,12 @@ class EmailSendinbluePlugin extends Plugin
         $engine = $e['engine'];
         if ($engine === 'sendinblue') {
             $options = $this->config->get('plugins.email-sendinblue');
-            $dsn = "sendinblue+{$options['transport']}://";
+            $transport = $options['transport'] ?? 'api';
+            $dsn = "sendinblue+{$transport}://";
             if ($options['transport'] === 'smtp') {
-                $dsn .= urlencode($options['username']) .":".urlencode($options['password']);
+                $dsn .= urlencode($options['username'] ?? '') .":".urlencode($options['password'] ?? '');
             } else {
-                $dsn .= urlencode($options['access_key']);
+                $dsn .= urlencode($options['access_key'] ?? '');
             }
             $dsn .= "@default";
             $e['dsn'] = $dsn;
