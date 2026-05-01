@@ -2,28 +2,28 @@
     "packages": [
         {
             "name": "symfony/sendinblue-mailer",
-            "version": "v5.4.8",
-            "version_normalized": "5.4.8.0",
+            "version": "v5.4.35",
+            "version_normalized": "5.4.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/sendinblue-mailer.git",
-                "reference": "3663724b2cd2f8913fee974d1c8c2260d81ba7a1"
+                "reference": "574bea1d9cf28cf6e9182242fc4eae26ed85be48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/sendinblue-mailer/zipball/3663724b2cd2f8913fee974d1c8c2260d81ba7a1",
-                "reference": "3663724b2cd2f8913fee974d1c8c2260d81ba7a1",
+                "url": "https://api.github.com/repos/symfony/sendinblue-mailer/zipball/574bea1d9cf28cf6e9182242fc4eae26ed85be48",
+                "reference": "574bea1d9cf28cf6e9182242fc4eae26ed85be48",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
                 "psr/event-dispatcher": "^1",
-                "symfony/mailer": "^5.1|^6.0"
+                "symfony/mailer": "^5.4.21|^6.2.7"
             },
             "require-dev": {
                 "symfony/http-client": "^4.4|^5.0|^6.0"
             },
-            "time": "2022-04-12T16:02:29+00:00",
+            "time": "2024-01-23T13:51:25+00:00",
             "type": "symfony-mailer-bridge",
             "installation-source": "dist",
             "autoload": {
@@ -51,7 +51,7 @@
             "description": "Symfony Sendinblue Mailer Bridge",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/sendinblue-mailer/tree/v5.4.8"
+                "source": "https://github.com/symfony/sendinblue-mailer/tree/v5.4.35"
             },
             "funding": [
                 {
