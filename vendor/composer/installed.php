@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'getgrav/email-sendinblue',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-develop',
+        'version' => 'dev-develop',
+        'reference' => '67d7907c90107c9eef79d8b149557992639219b4',
         'type' => 'grav-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'getgrav/email-sendinblue' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => '67d7907c90107c9eef79d8b149557992639219b4',
             'type' => 'grav-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -50,9 +50,9 @@
             ),
         ),
         'symfony/sendinblue-mailer' => array(
-            'pretty_version' => 'v5.4.8',
-            'version' => '5.4.8.0',
-            'reference' => '3663724b2cd2f8913fee974d1c8c2260d81ba7a1',
+            'pretty_version' => 'v5.4.35',
+            'version' => '5.4.35.0',
+            'reference' => '574bea1d9cf28cf6e9182242fc4eae26ed85be48',
             'type' => 'symfony-mailer-bridge',
             'install_path' => __DIR__ . '/../symfony/sendinblue-mailer',
             'aliases' => array(),

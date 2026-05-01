@@ -34,7 +34,7 @@ final class SendinblueApiTransport extends AbstractApiTransport
 {
     private $key;
 
-    public function __construct(string $key, HttpClientInterface $client = null, EventDispatcherInterface $dispatcher = null, LoggerInterface $logger = null)
+    public function __construct(string $key, ?HttpClientInterface $client = null, ?EventDispatcherInterface $dispatcher = null, ?LoggerInterface $logger = null)
     {
         $this->key = $key;
 
@@ -65,7 +65,7 @@ final class SendinblueApiTransport extends AbstractApiTransport
         }
 
         if (201 !== $statusCode) {
-            throw new HttpTransportException('Unable to send an email: '.$result['message'].sprintf(' (code %d).', $statusCode), $response);
+            throw new HttpTransportException('Unable to send an email: '.($result['message'] ?? $response->getContent(false)).sprintf(' (code %d).', $statusCode), $response);
         }
 
         $sentMessage->setMessageId($result['messageId']);
@@ -136,7 +136,7 @@ final class SendinblueApiTransport extends AbstractApiTransport
     private function prepareHeadersAndTags(Headers $headers): array
     {
         $headersAndTags = [];
-        $headersToBypass = ['from', 'to', 'cc', 'bcc', 'subject', 'reply-to', 'content-type', 'accept', 'api-key'];
+        $headersToBypass = ['from', 'sender', 'to', 'cc', 'bcc', 'subject', 'reply-to', 'content-type', 'accept', 'api-key'];
         foreach ($headers->all() as $name => $header) {
             if (\in_array($name, $headersToBypass, true)) {
                 continue;
@@ -180,6 +180,6 @@ final class SendinblueApiTransport extends AbstractApiTransport
 
     private function getEndpoint(): ?string
     {
-        return ($this->host ?: 'api.sendinblue.com').($this->port ? ':'.$this->port : '');
+        return ($this->host ?: 'api.brevo.com').($this->port ? ':'.$this->port : '');
     }
 }
